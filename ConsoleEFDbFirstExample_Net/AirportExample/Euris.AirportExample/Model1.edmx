@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AeroportiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Aereo">
+          <Key>
+            <PropertyRef Name="TipoAereo" />
+          </Key>
+          <Property Name="TipoAereo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NumPasseggeri" Type="int" Nullable="false" />
+          <Property Name="QtaMerci" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Aeroporto">
+          <Key>
+            <PropertyRef Name="Citta" />
+          </Key>
+          <Property Name="Citta" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nazione" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NumPiste" Type="int" />
+        </EntityType>
+        <EntityType Name="Volo">
+          <Key>
+            <PropertyRef Name="IdVolo" />
+          </Key>
+          <Property Name="IdVolo" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="GiornoSett" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CittaPart" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OraPart" Type="time" Precision="7" Nullable="false" />
+          <Property Name="CittaArr" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OraArr" Type="time" Precision="7" Nullable="false" />
+          <Property Name="TipoAereo" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Volo__CittaArr__2E1BDC42">
+          <End Role="Aeroporto" Type="Self.Aeroporto" Multiplicity="1" />
+          <End Role="Volo" Type="Self.Volo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aeroporto">
+              <PropertyRef Name="Citta" />
+            </Principal>
+            <Dependent Role="Volo">
+              <PropertyRef Name="CittaArr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Volo__CittaPart__2D27B809">
+          <End Role="Aeroporto" Type="Self.Aeroporto" Multiplicity="1" />
+          <End Role="Volo" Type="Self.Volo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aeroporto">
+              <PropertyRef Name="Citta" />
+            </Principal>
+            <Dependent Role="Volo">
+              <PropertyRef Name="CittaPart" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Volo__TipoAereo__2F10007B">
+          <End Role="Aereo" Type="Self.Aereo" Multiplicity="1" />
+          <End Role="Volo" Type="Self.Volo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aereo">
+              <PropertyRef Name="TipoAereo" />
+            </Principal>
+            <Dependent Role="Volo">
+              <PropertyRef Name="TipoAereo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AeroportiModelStoreContainer">
+          <EntitySet Name="Aereo" EntityType="Self.Aereo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Aeroporto" EntityType="Self.Aeroporto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Volo" EntityType="Self.Volo" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Volo__CittaArr__2E1BDC42" Association="Self.FK__Volo__CittaArr__2E1BDC42">
+            <End Role="Aeroporto" EntitySet="Aeroporto" />
+            <End Role="Volo" EntitySet="Volo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Volo__CittaPart__2D27B809" Association="Self.FK__Volo__CittaPart__2D27B809">
+            <End Role="Aeroporto" EntitySet="Aeroporto" />
+            <End Role="Volo" EntitySet="Volo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Volo__TipoAereo__2F10007B" Association="Self.FK__Volo__TipoAereo__2F10007B">
+            <End Role="Aereo" EntitySet="Aereo" />
+            <End Role="Volo" EntitySet="Volo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AeroportiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Aereo">
+          <Key>
+            <PropertyRef Name="TipoAereo" />
+          </Key>
+          <Property Name="TipoAereo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumPasseggeri" Type="Int32" Nullable="false" />
+          <Property Name="QtaMerci" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Voloes" Relationship="Self.FK__Volo__TipoAereo__2F10007B" FromRole="Aereo" ToRole="Volo" />
+        </EntityType>
+        <EntityType Name="Aeroporto">
+          <Key>
+            <PropertyRef Name="Citta" />
+          </Key>
+          <Property Name="Citta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nazione" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumPiste" Type="Int32" />
+          <NavigationProperty Name="Voloes" Relationship="Self.FK__Volo__CittaArr__2E1BDC42" FromRole="Aeroporto" ToRole="Volo" />
+          <NavigationProperty Name="Voloes1" Relationship="Self.FK__Volo__CittaPart__2D27B809" FromRole="Aeroporto" ToRole="Volo" />
+        </EntityType>
+        <EntityType Name="Volo">
+          <Key>
+            <PropertyRef Name="IdVolo" />
+          </Key>
+          <Property Name="IdVolo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GiornoSett" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CittaPart" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OraPart" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="CittaArr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OraArr" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="TipoAereo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Aereo" Relationship="Self.FK__Volo__TipoAereo__2F10007B" FromRole="Volo" ToRole="Aereo" />
+          <NavigationProperty Name="Aeroporto" Relationship="Self.FK__Volo__CittaArr__2E1BDC42" FromRole="Volo" ToRole="Aeroporto" />
+          <NavigationProperty Name="Aeroporto1" Relationship="Self.FK__Volo__CittaPart__2D27B809" FromRole="Volo" ToRole="Aeroporto" />
+        </EntityType>
+        <Association Name="FK__Volo__TipoAereo__2F10007B">
+          <End Role="Aereo" Type="Self.Aereo" Multiplicity="1" />
+          <End Role="Volo" Type="Self.Volo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aereo">
+              <PropertyRef Name="TipoAereo" />
+            </Principal>
+            <Dependent Role="Volo">
+              <PropertyRef Name="TipoAereo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Volo__CittaArr__2E1BDC42">
+          <End Role="Aeroporto" Type="Self.Aeroporto" Multiplicity="1" />
+          <End Role="Volo" Type="Self.Volo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aeroporto">
+              <PropertyRef Name="Citta" />
+            </Principal>
+            <Dependent Role="Volo">
+              <PropertyRef Name="CittaArr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Volo__CittaPart__2D27B809">
+          <End Role="Aeroporto" Type="Self.Aeroporto" Multiplicity="1" />
+          <End Role="Volo" Type="Self.Volo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aeroporto">
+              <PropertyRef Name="Citta" />
+            </Principal>
+            <Dependent Role="Volo">
+              <PropertyRef Name="CittaPart" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AeroportiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Aereos" EntityType="Self.Aereo" />
+          <EntitySet Name="Aeroportoes" EntityType="Self.Aeroporto" />
+          <EntitySet Name="Voloes" EntityType="Self.Volo" />
+          <AssociationSet Name="FK__Volo__TipoAereo__2F10007B" Association="Self.FK__Volo__TipoAereo__2F10007B">
+            <End Role="Aereo" EntitySet="Aereos" />
+            <End Role="Volo" EntitySet="Voloes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Volo__CittaArr__2E1BDC42" Association="Self.FK__Volo__CittaArr__2E1BDC42">
+            <End Role="Aeroporto" EntitySet="Aeroportoes" />
+            <End Role="Volo" EntitySet="Voloes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Volo__CittaPart__2D27B809" Association="Self.FK__Volo__CittaPart__2D27B809">
+            <End Role="Aeroporto" EntitySet="Aeroportoes" />
+            <End Role="Volo" EntitySet="Voloes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AeroportiModelStoreContainer" CdmEntityContainer="AeroportiEntities">
+          <EntitySetMapping Name="Aereos">
+            <EntityTypeMapping TypeName="AeroportiModel.Aereo">
+              <MappingFragment StoreEntitySet="Aereo">
+                <ScalarProperty Name="TipoAereo" ColumnName="TipoAereo" />
+                <ScalarProperty Name="NumPasseggeri" ColumnName="NumPasseggeri" />
+                <ScalarProperty Name="QtaMerci" ColumnName="QtaMerci" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Aeroportoes">
+            <EntityTypeMapping TypeName="AeroportiModel.Aeroporto">
+              <MappingFragment StoreEntitySet="Aeroporto">
+                <ScalarProperty Name="Citta" ColumnName="Citta" />
+                <ScalarProperty Name="Nazione" ColumnName="Nazione" />
+                <ScalarProperty Name="NumPiste" ColumnName="NumPiste" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Voloes">
+            <EntityTypeMapping TypeName="AeroportiModel.Volo">
+              <MappingFragment StoreEntitySet="Volo">
+                <ScalarProperty Name="IdVolo" ColumnName="IdVolo" />
+                <ScalarProperty Name="GiornoSett" ColumnName="GiornoSett" />
+                <ScalarProperty Name="CittaPart" ColumnName="CittaPart" />
+                <ScalarProperty Name="OraPart" ColumnName="OraPart" />
+                <ScalarProperty Name="CittaArr" ColumnName="CittaArr" />
+                <ScalarProperty Name="OraArr" ColumnName="OraArr" />
+                <ScalarProperty Name="TipoAereo" ColumnName="TipoAereo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
