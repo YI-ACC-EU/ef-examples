@@ -1,0 +1,50 @@
+[
+  {
+    "FlightNo": "ABC123",
+    "FlightDepartTo": "TIA",
+    "FlightArriveFrom": "SYD",
+    "Distance": 5500
+  },
+  {
+    "FlightNo": "ABC987",
+    "FlightDepartTo": "PER",
+    "FlightArriveFrom": "TIA",
+    "Distance": 8800
+  },
+  {
+    "FlightNo": "JKL980",
+    "FlightDepartTo": "MEL",
+    "FlightArriveFrom": "TIA",
+    "Distance": 9800
+  },
+  {
+    "FlightNo": "PRA172",
+    "FlightDepartTo": "PER",
+    "FlightArriveFrom": "DXB",
+    "Distance": 7400
+  },
+  {
+    "FlightNo": "QR340",
+    "FlightDepartTo": "PKR",
+    "FlightArriveFrom": "IJK",
+    "Distance": 3500
+  },
+  {
+    "FlightNo": "STH650",
+    "FlightDepartTo": "PER",
+    "FlightArriveFrom": "MEL",
+    "Distance": 5680
+  },
+  {
+    "FlightNo": "XCF123",
+    "FlightDepartTo": "ABC",
+    "FlightArriveFrom": "AKL",
+    "Distance": 7600
+  },
+  {
+    "FlightNo": "XYP023",
+    "FlightDepartTo": "XYZ",
+    "FlightArriveFrom": "PKR",
+    "Distance": 5800
+  }
+]

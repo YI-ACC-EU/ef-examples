@@ -1,0 +1,310 @@
+[
+  {
+    "InstanceID": 1,
+    "FlightNo": "PRA172",
+    "PlaneID": 3,
+    "PilotAboardID": 1,
+    "CoPilotAboardID": 2,
+    "FSM_AttendantID": 5,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 1,
+        "AttendantID": 2
+      },
+      {
+        "InstanceID": 1,
+        "AttendantID": 7
+      }
+    ]
+  },
+  {
+    "InstanceID": 2,
+    "FlightNo": "XCF123",
+    "PlaneID": 3,
+    "PilotAboardID": 2,
+    "CoPilotAboardID": 3,
+    "FSM_AttendantID": 1,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 2,
+        "AttendantID": 1
+      },
+      {
+        "InstanceID": 2,
+        "AttendantID": 3
+      },
+      {
+        "InstanceID": 2,
+        "AttendantID": 8
+      }
+    ]
+  },
+  {
+    "InstanceID": 3,
+    "FlightNo": "JKL980",
+    "PlaneID": 4,
+    "PilotAboardID": 3,
+    "CoPilotAboardID": 1,
+    "FSM_AttendantID": 2,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 3,
+        "AttendantID": 4
+      },
+      {
+        "InstanceID": 3,
+        "AttendantID": 5
+      }
+    ]
+  },
+  {
+    "InstanceID": 4,
+    "FlightNo": "QR340",
+    "PlaneID": 4,
+    "PilotAboardID": 3,
+    "CoPilotAboardID": 1,
+    "FSM_AttendantID": 2,
+    "DateTimeLeave": "2015-12-10T10:30:00",
+    "DateTimeArrive": "2015-12-11T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 4,
+        "AttendantID": 1
+      }
+    ]
+  },
+  {
+    "InstanceID": 5,
+    "FlightNo": "QR340",
+    "PlaneID": 4,
+    "PilotAboardID": 3,
+    "CoPilotAboardID": 1,
+    "FSM_AttendantID": 2,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-12T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 5,
+        "AttendantID": 5
+      }
+    ]
+  },
+  {
+    "InstanceID": 6,
+    "FlightNo": "QR340",
+    "PlaneID": 4,
+    "PilotAboardID": 3,
+    "CoPilotAboardID": 1,
+    "FSM_AttendantID": 2,
+    "DateTimeLeave": "2015-12-12T10:30:00",
+    "DateTimeArrive": "2015-12-13T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 6,
+        "AttendantID": 1
+      }
+    ]
+  },
+  {
+    "InstanceID": 7,
+    "FlightNo": "PRA172",
+    "PlaneID": 3,
+    "PilotAboardID": 1,
+    "CoPilotAboardID": 2,
+    "FSM_AttendantID": 5,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 7,
+        "AttendantID": 3
+      },
+      {
+        "InstanceID": 7,
+        "AttendantID": 6
+      }
+    ]
+  },
+  {
+    "InstanceID": 8,
+    "FlightNo": "ABC987",
+    "PlaneID": 2,
+    "PilotAboardID": 5,
+    "CoPilotAboardID": 3,
+    "FSM_AttendantID": 3,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 8,
+        "AttendantID": 1
+      },
+      {
+        "InstanceID": 8,
+        "AttendantID": 3
+      }
+    ]
+  },
+  {
+    "InstanceID": 9,
+    "FlightNo": "ABC123",
+    "PlaneID": 3,
+    "PilotAboardID": 1,
+    "CoPilotAboardID": 2,
+    "FSM_AttendantID": 4,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 9,
+        "AttendantID": 5
+      }
+    ]
+  },
+  {
+    "InstanceID": 10,
+    "FlightNo": "JKL980",
+    "PlaneID": 4,
+    "PilotAboardID": 3,
+    "CoPilotAboardID": 1,
+    "FSM_AttendantID": 2,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 10,
+        "AttendantID": 7
+      },
+      {
+        "InstanceID": 10,
+        "AttendantID": 8
+      },
+      {
+        "InstanceID": 10,
+        "AttendantID": 9
+      }
+    ]
+  },
+  {
+    "InstanceID": 11,
+    "FlightNo": "STH650",
+    "PlaneID": 1,
+    "PilotAboardID": 3,
+    "CoPilotAboardID": 4,
+    "FSM_AttendantID": 5,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 11,
+        "AttendantID": 1
+      },
+      {
+        "InstanceID": 11,
+        "AttendantID": 2
+      },
+      {
+        "InstanceID": 11,
+        "AttendantID": 3
+      }
+    ]
+  },
+  {
+    "InstanceID": 12,
+    "FlightNo": "XCF123",
+    "PlaneID": 3,
+    "PilotAboardID": 2,
+    "CoPilotAboardID": 3,
+    "FSM_AttendantID": 1,
+    "DateTimeLeave": "2015-12-11T10:30:00",
+    "DateTimeArrive": "2015-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 12,
+        "AttendantID": 7
+      }
+    ]
+  },
+  {
+    "InstanceID": 13,
+    "FlightNo": "ABC123",
+    "PlaneID": 5,
+    "PilotAboardID": 4,
+    "CoPilotAboardID": 2,
+    "FSM_AttendantID": 4,
+    "DateTimeLeave": "2017-11-11T10:30:00",
+    "DateTimeArrive": "2017-11-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 13,
+        "AttendantID": 4
+      }
+    ]
+  },
+  {
+    "InstanceID": 14,
+    "FlightNo": "ABC123",
+    "PlaneID": 5,
+    "PilotAboardID": 4,
+    "CoPilotAboardID": 2,
+    "FSM_AttendantID": 4,
+    "DateTimeLeave": "2017-11-11T10:30:00",
+    "DateTimeArrive": "2017-11-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 14,
+        "AttendantID": 9
+      }
+    ]
+  },
+  {
+    "InstanceID": 15,
+    "FlightNo": "JKL980",
+    "PlaneID": 4,
+    "PilotAboardID": 3,
+    "CoPilotAboardID": 1,
+    "FSM_AttendantID": 2,
+    "DateTimeLeave": "2017-12-11T10:30:00",
+    "DateTimeArrive": "2017-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 15,
+        "AttendantID": 1
+      },
+      {
+        "InstanceID": 15,
+        "AttendantID": 6
+      },
+      {
+        "InstanceID": 15,
+        "AttendantID": 7
+      }
+    ]
+  },
+  {
+    "InstanceID": 16,
+    "FlightNo": "STH650",
+    "PlaneID": 1,
+    "PilotAboardID": 3,
+    "CoPilotAboardID": 4,
+    "FSM_AttendantID": 5,
+    "DateTimeLeave": "2017-12-11T10:30:00",
+    "DateTimeArrive": "2017-12-14T10:30:00",
+    "Attendants": [
+      {
+        "InstanceID": 16,
+        "AttendantID": 4
+      },
+      {
+        "InstanceID": 16,
+        "AttendantID": 5
+      }
+    ]
+  }
+]

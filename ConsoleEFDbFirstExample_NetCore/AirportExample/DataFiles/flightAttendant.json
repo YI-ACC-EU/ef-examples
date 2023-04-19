@@ -1,0 +1,74 @@
+[
+  {
+    "AttendantID": 1,
+    "FirstName": "Pramesh",
+    "LastName": "Shrestha",
+    "DOB": "1989-04-25",
+    "HireDate": "2004-04-25",
+    "MentorID": 6
+  },
+  {
+    "AttendantID": 2,
+    "FirstName": "John",
+    "LastName": "Rai",
+    "DOB": "1979-04-22",
+    "HireDate": "2005-04-25",
+    "MentorID": 3
+  },
+  {
+    "AttendantID": 3,
+    "FirstName": "Mike",
+    "LastName": "Magar",
+    "DOB": "1990-04-22",
+    "HireDate": "2010-04-25",
+    "MentorID": 5
+  },
+  {
+    "AttendantID": 4,
+    "FirstName": "Hari",
+    "LastName": "Cobin",
+    "DOB": "1990-04-22",
+    "HireDate": "2003-04-25",
+    "MentorID": 3
+  },
+  {
+    "AttendantID": 5,
+    "FirstName": "Greg",
+    "LastName": "Nepal",
+    "DOB": "1991-04-22",
+    "HireDate": "2002-04-25",
+    "MentorID": 4
+  },
+  {
+    "AttendantID": 6,
+    "FirstName": "Ram",
+    "LastName": "Sharma",
+    "DOB": "1998-04-22",
+    "HireDate": "2001-04-25",
+    "MentorID": 1
+  },
+  {
+    "AttendantID": 7,
+    "FirstName": "Amol",
+    "LastName": "Pokharel",
+    "DOB": "1980-04-22",
+    "HireDate": "2008-04-25",
+    "MentorID": 1
+  },
+  {
+    "AttendantID": 8,
+    "FirstName": "Nishesh",
+    "LastName": "Gajurel",
+    "DOB": "1899-04-22",
+    "HireDate": "2009-04-25",
+    "MentorID": 2
+  },
+  {
+    "AttendantID": 9,
+    "FirstName": "Pratik",
+    "LastName": "Shrestha",
+    "DOB": "1999-04-22",
+    "HireDate": "2003-04-25",
+    "MentorID": 7
+  }
+]

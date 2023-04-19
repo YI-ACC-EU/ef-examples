@@ -1,0 +1,82 @@
+[
+  {
+    "AirportCode": "ABC",
+    "AirportName": "Abc Airport",
+    "ContactNo": 985485893,
+    "Longitude": 4.322100000000000e+001,
+    "Latitude": 4.454000000000000e+001,
+    "CountryCode": "ENG"
+  },
+  {
+    "AirportCode": "AKL",
+    "AirportName": "Auckland Airport",
+    "ContactNo": 6492750789,
+    "Longitude": 3.700820000000000e+001,
+    "Latitude": 1.747850000000000e+002,
+    "CountryCode": "NZL"
+  },
+  {
+    "AirportCode": "DXB",
+    "AirportName": "Dubai International Airport",
+    "ContactNo": 6494544432,
+    "Longitude": 5.654000000000000e+001,
+    "Latitude": 3.333000000000000e+001,
+    "CountryCode": "UAE"
+  },
+  {
+    "AirportCode": "IJK",
+    "AirportName": "Ijk Airport",
+    "ContactNo": 844428322,
+    "Longitude": 6.754000000000001e+001,
+    "Latitude": 5.432000000000000e+001,
+    "CountryCode": "POR"
+  },
+  {
+    "AirportCode": "MEL",
+    "AirportName": "Melbourne Airport",
+    "ContactNo": 392971600,
+    "Longitude": 3.766900000000000e+001,
+    "Latitude": 1.448410000000000e+002,
+    "CountryCode": "AUS"
+  },
+  {
+    "AirportCode": "PER",
+    "AirportName": "Perth Airport",
+    "ContactNo": 894788888,
+    "Longitude": 3.193850000000000e+001,
+    "Latitude": 1.159672000000000e+002,
+    "CountryCode": "AUS"
+  },
+  {
+    "AirportCode": "PKR",
+    "AirportName": "Pokhara Airport",
+    "ContactNo": 97761465979,
+    "Longitude": 2.820000000000000e+001,
+    "Latitude": 8.398170000000000e+001,
+    "CountryCode": "NPL"
+  },
+  {
+    "AirportCode": "SYD",
+    "AirportName": "Sydney Airport",
+    "ContactNo": 296679111,
+    "Longitude": 3.393990000000000e+001,
+    "Latitude": 1.511753000000000e+002,
+    "CountryCode": "AUS"
+  },
+  {
+    "AirportCode": "TIA",
+    "AirportName": "Tribhuwan International Airport",
+    "ContactNo": 97714113033,
+    "Longitude": 2.769810000000000e+001,
+    "Latitude": 8.535920000000000e+001,
+    "CountryCode": "NPL"
+  },
+  {
+    "AirportCode": "XYZ",
+    "AirportName": "Xyz Airport",
+    "ContactNo": 542345433,
+    "Longitude": 3.443000000000000e+001,
+    "Latitude": 2.332000000000000e+001,
+    "CountryCode": "USA"
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "PilotID": 1,
+    "FirstName": "Pramesh",
+    "LastName": "Shrestha",
+    "DOB": "1989-04-25",
+    "HoursFlown": 5,
+    "PlaneModels": [
+      {
+        "PlaneModel": "737",
+        "PilotID": 1
+      },
+      {
+        "PlaneModel": "777",
+        "PilotID": 1
+      },
+      {
+        "PlaneModel": "A340",
+        "PilotID": 1
+      }
+    ]
+  },
+  {
+    "PilotID": 2,
+    "FirstName": "Maila",
+    "LastName": "Battard",
+    "DOB": "2002-11-15",
+    "HoursFlown": 10,
+    "PlaneModels": [
+      {
+        "PlaneModel": "A340",
+        "PilotID": 2
+      },
+      {
+        "PlaneModel": "A390",
+        "PilotID": 2
+      }
+    ]
+  },
+  {
+    "PilotID": 3,
+    "FirstName": "Tom",
+    "LastName": "Hardy",
+    "DOB": "1977-09-15",
+    "HoursFlown": 39,
+    "PlaneModels": [
+      {
+        "PlaneModel": "777",
+        "PilotID": 3
+      },
+      {
+        "PlaneModel": "A340",
+        "PilotID": 3
+      },
+      {
+        "PlaneModel": "A380",
+        "PilotID": 3
+      }
+    ]
+  },
+  {
+    "PilotID": 4,
+    "FirstName": "Leonardo",
+    "LastName": "DiCaprio",
+    "DOB": "1974-11-11",
+    "HoursFlown": 85,
+    "PlaneModels": [
+      {
+        "PlaneModel": "779",
+        "PilotID": 4
+      },
+      {
+        "PlaneModel": "A340",
+        "PilotID": 4
+      }
+    ]
+  },
+  {
+    "PilotID": 5,
+    "FirstName": "Huge",
+    "LastName": "Glass",
+    "DOB": "1980-08-22",
+    "HoursFlown": 9,
+    "PlaneModels": [
+      {
+        "PlaneModel": "787",
+        "PilotID": 5
+      }
+    ]
+  },
+  {
+    "PilotID": 6,
+    "FirstName": "John",
+    "LastName": "Fitzgerald",
+    "DOB": "1979-09-18",
+    "HoursFlown": 77,
+    "PlaneModels": [
+      {
+        "PlaneModel": "787",
+        "PilotID": 6
+      }
+    ]
+  },
+  {
+    "PilotID": 8,
+    "FirstName": "Michael",
+    "LastName": "Hartstein",
+    "DOB": "1996-02-17",
+    "HoursFlown": 18,
+    "PlaneModels": [
+      {
+        "PlaneModel": "A340",
+        "PilotID": 8
+      }
+    ]
+  },
+  {
+    "PilotID": 9,
+    "FirstName": "Steven",
+    "LastName": "King",
+    "DOB": "1987-06-17",
+    "HoursFlown": 60,
+    "PlaneModels": [
+      {
+        "PlaneModel": "A340",
+        "PilotID": 9
+      }
+    ]
+  }
+]
