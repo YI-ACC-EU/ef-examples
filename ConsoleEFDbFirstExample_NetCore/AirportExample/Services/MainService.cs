@@ -16,6 +16,7 @@ public class MainService : IMainService
 
     public void Run()
     {
+        _airportsService.PrintByCountryCode("ITA");
         //Qui mettiamo la logica dell'app
         //throw new NotImplementedException();
     }

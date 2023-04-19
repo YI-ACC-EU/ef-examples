@@ -6,7 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
+
+var loggerFactory = LoggerFactory.Create(builder => { builder.AddConsole(); });
 
 using var host = Host.CreateDefaultBuilder(args)
     .ConfigureAppConfiguration(app =>
@@ -24,11 +25,12 @@ using var host = Host.CreateDefaultBuilder(args)
                 config.AddConsole();
                 config.AddDebug();
             })
-            .AddSingleton<ILoggerFactory, LoggerFactory>()
+            .AddSingleton(loggerFactory)
             .AddSingleton(typeof(ILogger<>), typeof(Logger<>))
             .AddDbContext<AirlinesDbContext>(options =>
                 {
                     options.UseSqlServer(connectionString);
+                    options.UseLoggerFactory(loggerFactory);
                 })
             .AddTransient<IFileSystemRepository, FileSystemRepository>()
             .AddTransient<IAirportsRepository, AirportsRepository>()
