@@ -27,15 +27,13 @@ public class PilotsRepository : IPilotsRepository
         {
             pilots.ForEach(pilot =>
             {
+                var pm = pilot.PlaneModels.Select(x => x.ModelNumber);
                 pilot.PilotId = 0;
-                var plainModels = pilot.PlaneModels.Select(x => x.ModelNumber).ToArray();
-                var planeModelsForPilot = _db.PlaneModels.Where(x => plainModels.Contains(x.ModelNumber)).ToList();
-                var pilotFromDb = _db.Pilots.Add(pilot);
-                _db.SaveChanges();
-                pilotFromDb.Entity.PlaneModels.AddRange(planeModelsForPilot);
-                _db.SaveChanges();
+                pilot.PlaneModels = new();
+                pilot.PlaneModels = _db.PlaneModels.Where(x => pm.Contains(x.ModelNumber)).ToList();
+                _db.Pilots.Add(pilot);
             });
-            
+            _db.SaveChanges();
             return true;
         }
         catch (Exception e)
