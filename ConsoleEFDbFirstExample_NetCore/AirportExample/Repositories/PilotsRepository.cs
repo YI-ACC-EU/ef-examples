@@ -25,12 +25,18 @@ public class PilotsRepository : IPilotsRepository
     {
         try
         {
+            var allModelsIds = pilots
+                .SelectMany(x => x.PlaneModels)
+                .Select(x => x.ModelNumber)
+                .Distinct();
+
+            var availableModels = _db.PlaneModels.Where(x => allModelsIds.Contains(x.ModelNumber)).ToList();
             pilots.ForEach(pilot =>
             {
                 var pm = pilot.PlaneModels.Select(x => x.ModelNumber);
                 pilot.PilotId = 0;
                 pilot.PlaneModels = new();
-                pilot.PlaneModels = _db.PlaneModels.Where(x => pm.Contains(x.ModelNumber)).ToList();
+                pilot.PlaneModels = availableModels.Where(x => pm.Contains(x.ModelNumber)).ToList();
                 _db.Pilots.Add(pilot);
             });
             _db.SaveChanges();
