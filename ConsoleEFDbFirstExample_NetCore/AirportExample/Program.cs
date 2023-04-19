@@ -33,8 +33,10 @@ using var host = Host.CreateDefaultBuilder(args)
                     options.UseLoggerFactory(loggerFactory);
                 })
             .AddTransient<IFileSystemRepository, FileSystemRepository>()
+            .AddTransient<IPilotsRepository, PilotsRepository>()
             .AddTransient<IAirportsRepository, AirportsRepository>()
             .AddTransient<IAirportService, AirportService>()
+            .AddTransient<IPilotService, PilotsService>()
             .AddTransient<IMainService, MainService>();
     })
     .Build();

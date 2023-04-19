@@ -7,16 +7,13 @@
     "HoursFlown": 5,
     "PlaneModels": [
       {
-        "PlaneModel": "737",
-        "PilotID": 1
+        "PlaneModel": "737"
       },
       {
-        "PlaneModel": "777",
-        "PilotID": 1
+        "PlaneModel": "777"
       },
       {
-        "PlaneModel": "A340",
-        "PilotID": 1
+        "PlaneModel": "A340"
       }
     ]
   },
