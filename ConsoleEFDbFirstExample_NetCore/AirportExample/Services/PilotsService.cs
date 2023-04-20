@@ -8,6 +8,7 @@ namespace AirportExample.Services;
 public interface IPilotService
 {
     void ImportPilots();
+    void Query();
 }
 
 public class PilotsService : IPilotService
@@ -64,5 +65,10 @@ public class PilotsService : IPilotService
         //salvare dati tramite repository
         _pilotsRepository.Insert(pilotsToInsert);
         _logger.LogInformation("Import complete");
+    }
+
+    public void Query()
+    {
+        _pilotsRepository.Query();
     }
 }

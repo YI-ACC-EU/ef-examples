@@ -22,6 +22,8 @@ public class MainService : IMainService
         //throw new NotImplementedException();
         //_airportsService.PrintByCountryCode("ITA");
 
-        _pilotService.ImportPilots();
+        //_pilotService.ImportPilots();
+
+        _pilotService.Query();
     }
 }
