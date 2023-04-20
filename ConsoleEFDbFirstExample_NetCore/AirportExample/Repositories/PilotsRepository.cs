@@ -58,7 +58,7 @@ public class PilotsRepository : IPilotsRepository
 
         ////LIKE
         //Query2();
-        Query2_1();
+        //Query2_1();
         //Query2_2();
 
         ////GROUP BY
@@ -70,6 +70,8 @@ public class PilotsRepository : IPilotsRepository
 
         //JOIN EXAMPLES;
         //Query5();
+
+        Query_6();
     }
 
     private void Query1()
@@ -160,5 +162,24 @@ public class PilotsRepository : IPilotsRepository
         _logger.LogInformation($"JOIN RESULT - NO JOIN: { resultNoJoin.ToJson() }");
         _logger.LogInformation($"JOIN RESULT - PlainJoin JOIN: { resultWithPilotJoin.ToJson() }");
         _logger.LogInformation($"JOIN RESULT - AllJoin JOIN: { resultWithAllJoins.ToJson() }");
+    }
+
+    private void Query_6()
+    {
+       var result = _db.Flights
+            .Include(x=>x.ArriveFrom).ThenInclude(x=>x.Country)
+            .Include(x=>x.DepartTo).ThenInclude(x=>x.Country)
+            .Where(x=>
+                x.ArriveFrom.CountryCode == "NPL" ||
+                x.DepartTo.CountryCode == "NPL")
+            .Select(x=> new
+            {
+                x.FlightNo,
+                From = x.ArriveFrom.Country.CountryName,
+                To = x.DepartTo.Country.CountryName,
+                x.Distance
+            })
+            .ToList();
+       _logger.LogInformation($"Flights: { result.ToJson() }");
     }
 }
